@@ -1,0 +1,81 @@
+/* General Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4a90e2, #50b3ff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+  }
+  
+  .get-started-btn {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #ffd633;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+    }
+  
+    .header {
+      flex-wrap: wrap;
+    }
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
+    .get-started-btn {
+      margin-top: 10px;
+    }
+  }
+  
