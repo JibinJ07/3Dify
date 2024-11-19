@@ -57,6 +57,24 @@
     background-color: #ffd633;
     transform: scale(1.1);
   }
+
+  /* src/components/Header.css */
+.home-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0056b3;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.home-link:hover {
+  background-color: #003d82;
+  transform: scale(1.1);
+}
+
   
   /* Responsive Design */
   @media (max-width: 768px) {

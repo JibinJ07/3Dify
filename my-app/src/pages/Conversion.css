@@ -1,0 +1,150 @@
+/* src/pages/Conversion.css */
+
+/* General Page Styling */
+.conversion-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4a90e2, #50b3ff);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .header .logo:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .header .home-link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #0056b3;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .header .home-link:hover {
+    background-color: #003d82;
+    transform: scale(1.1);
+  }
+  
+  /* Main Section Styling */
+  .conversion-main {
+    max-width: 800px;
+    margin: 80px auto 20px; /* Adjusted to account for fixed header */
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .conversion-main h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #007bff;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input[type="number"],
+  input[type="file"] {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Floor Group Styling */
+  .floor-group {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .floor-group h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  /* Dimension Group Styling */
+  .dimension-group {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .dimension-group .form-group {
+    flex: 1;
+  }
+  
+  /* Convert Button */
+  .convert-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .convert-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dimension-group {
+      flex-direction: column;
+    }
+  
+    .dimension-group .form-group {
+      margin-bottom: 10px;
+    }
+  
+    .convert-btn {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  
