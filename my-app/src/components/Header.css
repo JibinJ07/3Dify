@@ -77,23 +77,22 @@
 
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-links {
+@media (max-width: 768px) {
+  .nav-links {
       flex-direction: column;
       gap: 10px;
       display: none;
-    }
-  
-    .header {
-      flex-wrap: wrap;
-    }
-  
-    .logo {
-      margin-bottom: 10px;
-    }
-  
-    .get-started-btn {
-      margin-top: 10px;
-    }
   }
-  
+
+  .header {
+      flex-wrap: wrap;
+  }
+
+  .logo {
+      margin-bottom: 10px;
+  }
+
+  .get-started-btn {
+      margin-top: 10px;
+  }
+}

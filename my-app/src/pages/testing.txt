@@ -1,0 +1,344 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #141619d8, #2C2E3A);
+    color: #B3B4BD;
+    overflow-x: hidden;
+  }
+   /* Particle Animation */
+  body:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/images/particles.png') repeat;
+    animation: moveParticles 20s linear infinite;
+    opacity: 0.3;
+  }
+  
+  @keyframes moveParticles {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1000px 1000px;
+    }
+  }
+  
+  .home-container {
+    text-align: center;
+    padding: 20px;
+    color: #B3B4BD;
+  }
+    
+    /* Fade-in Animation for All Sections */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .section {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #060d5bf1, #0a22c0fa);
+      color: #c0c1c8;
+      padding: 60px 20px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+  }
+  
+  .hero .highlight {
+      color: #8ea6ff;
+      font-weight: bold;
+  }
+  
+  .hero p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+    
+    /* Section Styles */
+    .content-section {
+      background: linear-gradient(to bottom, #2C2E3A, #141619cb);
+      border-radius: 15px;
+      padding: 50px 30px;
+      margin: 20px auto;
+      max-width: 900px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+  }
+    
+    .content-section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+    
+    .content-section h2 {
+      font-size: 2rem;
+      color: #7895ff;
+      margin-bottom: 15px;
+  }
+  
+  .content-section p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #B3B4BD;
+      max-width: 750px;
+      margin: 0 auto;
+  }
+    
+  
+  /* Team Section */
+  .team-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  /* Team Member Card */
+  .team-card {
+    background: #363847;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #B3B4BD;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image Container */
+  .image-container {
+    margin-bottom: 15px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  
+  .team-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #c0a50a;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Team Member Details */
+  .team-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #c0a50a;
+    margin: 10px 0 5px;
+  }
+  
+  .team-position {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #4f5fec;
+    margin-bottom: 15px;
+  }
+  
+  .team-contribution {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 250px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .team-card {
+      padding: 15px;
+    }
+  
+    .team-name {
+      font-size: 1.2rem;
+    }
+  
+    .team-position {
+      font-size: 1rem;
+    }
+  
+    .team-contribution {
+      font-size: 0.85rem;
+    }
+  }
+  
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    
+      .content-section {
+        padding: 30px 20px;
+      }
+    
+      .content-section p {
+        font-size: 0.95rem;
+      }
+    }
+    // src/pages/Home.js
+import React from 'react';
+import './Home.css';
+
+const teamMembers = [
+  {
+    name: 'Aryan Brahmane',
+    position: 'Frontend Developer',
+    contribution:
+      'Aryan is a proficient UX designer and front-end developer focused on creating intuitive, user-centered interfaces.',
+    image: '/images/aryan.jpg', // Replace with actual image path
+  },
+  {
+    name: 'Sophia Dsilva',
+    position: 'Interface Designer',
+    contribution:
+      'Sophia ensures the application’s interface is both aesthetically pleasing and intuitive for end users.',
+    image: '/images/sophia.jpg',
+  },
+  {
+    name: 'Shahiil Shet',
+    position: '3D Modeling Engineer',
+    contribution:
+      'Shahil implements algorithms for 3D rendering and spatial transformations, ensuring the seamless generation of precise 3D models.',
+    image: '/images/shahiil.jpg',
+  },
+  {
+    name: 'Raghav Shrivastav',
+    position: '3D Modeling Engineer',
+    contribution:
+      'Raghav specializes in computational geometry and 3D rendering for transforming blueprints into interactive 3D walkthroughs.',
+    image: '/images/raghav.jpg',
+  },
+  {
+    name: 'Jibin Joseph',
+    position: 'UX Workflow Architect',
+    contribution:
+      'Jibin optimizes user workflows and interaction design, ensuring the software delivers seamless, user-centric functionality.',
+    image: '/images/jibin.jpg',
+  },
+  
+  {
+    name: 'Atharva Chavan',
+    position: 'AI Systems Architect',
+    contribution:
+      'Atharva designs and trains AI systems for tasks like structural analysis and risk assessment, driving advanced AI capabilities.',
+    image: '/images/atharva.jpg',
+  },
+  
+];
+
+const Home = () => {
+  return (
+    <div className="home-container">
+      <section id="home" className="hero section">
+        <h1>Welcome to <span className="highlight">3Dify</span></h1>
+        <p>Your ultimate 3D content converter, designed to make file transformations seamless and powerful.</p>
+      </section>
+
+      <section id="overview" className="content-section section">
+        <h2>Overview</h2>
+        <p>
+        3Dify is a 2D-to-3D Blueprint Converter which  is a standalone software application designed to enhance operational efficiency for National Security Guard (NSG) personnel. The app converts 2D architectural blueprints into interactive 3D walkthrough models, enabling commanders and ground forces to better understand and navigate target layouts during mission planning. 
+
+        </p>
+      </section>
+
+      <section id="features" className="content-section section">
+        <h2>Features</h2>
+        <p>
+        The app features advanced blueprint processing to detect and render structural elements such as walls, doors, windows, and staircases, while also offering the ability to input customizable parameters like dimensions and entry/exit points for precise modeling. It generates immersive 3D walkthroughs that enhance situational awareness and integrates offline maps and satellite imagery to provide comprehensive geographical context. This innovation revolutionizes operational preparation by providing detailed visual insights that streamline mission planning and briefing.
+        </p>
+      </section>
+
+      <section id="about" className="content-section section">
+        <h2>About Us</h2>
+        <p>
+          We are a passionate team of developers, designers, and visionaries dedicated to revolutionizing the world of
+          3D content creation. At 3Dify, innovation and simplicity go hand in hand.
+        </p>
+
+        <div className="team-section">
+          {teamMembers.map((member, index) => (
+            <div className="team-card" key={index}>
+              <div className="image-container">
+                <img src={member.image} alt={member.name} className="team-image" />
+              </div>
+              <h3 className="team-name">{member.name}</h3>
+              <p className="team-position">{member.position}</p>
+              <p className="team-contribution">{member.contribution}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
+//
+<section id="features" className="features-section section">
+        <h2>Key Features</h2>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="card-front">
+              <h3>Advanced Rendering</h3>
+            </div>
+            <div className="card-back">
+              <p>
+                Detects and renders structural elements like walls, doors, and windows with exceptional precision.
+              </p>
+            </div>
+          </div>
+          <div className="feature-card">
+            <div className="card-front">
+              <h3>Immersive Walkthroughs</h3>
+            </div>
+            <div className="card-back">
+              <p>
+                Provides 3D walkthroughs for better situational awareness and mission planning.
+              </p>
+            </div>
+          </div>
+          <div className="feature-card">
+            <div className="card-front">
+              <h3>Customizable Models</h3>
+            </div>
+            <div className="card-back">
+              <p>
+                Allows users to input parameters like dimensions and entry points for detailed modeling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>

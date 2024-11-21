@@ -1,10 +1,8 @@
-/* src/pages/Conversion.css */
-
 /* General Page Styling */
 .conversion-page {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #141619;
+    color: #B3B4BD;
     margin: 0;
     padding: 0;
   }
@@ -15,7 +13,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: linear-gradient(135deg, #4a90e2, #50b3ff);
+    background: linear-gradient(135deg, #050A44, #0A21C0);
+    color: #B3B4BD;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -23,6 +22,7 @@
   }
   
   .header .logo {
+    color: #c4c5cb;
     font-size: 1.8rem;
     font-weight: bold;
     cursor: pointer;
@@ -38,26 +38,28 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    background-color: #0056b3;
-    color: white;
+    background-color: #B3B4BD;
+    color: #242424;
     padding: 8px 15px;
     border-radius: 4px;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .header .home-link:hover {
-    background-color: #003d82;
+    background-color: #c0a50a;
     transform: scale(1.1);
   }
   
   /* Main Section Styling */
   .conversion-main {
     max-width: 800px;
-    margin: 80px auto 20px; /* Adjusted to account for fixed header */
-    background: #fff;
+    margin: 80px auto 20px; 
+    background: #333543;
+    color: #B3B4BD;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
   }
   
   /* Heading */
@@ -65,7 +67,7 @@
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.8rem;
-    color: #007bff;
+    color: #6e99ff;
   }
   
   /* Form Group */
@@ -84,7 +86,9 @@
     width: 90%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    background-color: #141619;
+    color: #B3B4BD;
+    border: 1px solid #0A21C0;
     border-radius: 5px;
     font-size: 1rem;
   }
@@ -93,23 +97,25 @@
   .floor-group {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #0A21C0;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #b3b4bd70;
   }
   
   .floor-group h3 {
     margin-bottom: 10px;
-    color: #007bff;
+    color: #c0a50a;
   }
   
   /* Dimension Group Styling */
   .dimension-group {
+   
     display: flex;
     gap: 25px;
   }
   
   .dimension-group .form-group {
+    color: #c0a50aec;
     flex: 1;
   }
   
@@ -118,8 +124,8 @@
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #007bff;
-    color: white;
+    background-color: #122390;
+    color: #dbdce1;
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -129,22 +135,21 @@
   }
   
   .convert-btn:hover {
-    background-color: #0056b3;
+    background-color: #c0a50aec;
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .dimension-group {
+@media (max-width: 768px) {
+  .dimension-group {
       flex-direction: column;
-    }
-  
-    .dimension-group .form-group {
+  }
+
+  .dimension-group .form-group {
       margin-bottom: 10px;
-    }
-  
-    .convert-btn {
+  }
+
+  .convert-btn {
       font-size: 1rem;
       padding: 12px;
-    }
   }
-  
+}

@@ -10,10 +10,13 @@ const Conversion = () => {
     const value = parseInt(e.target.value, 10) || 1;
     setNumFloors(value);
 
-    const updatedFloors = Array.from({ length: value }, (_, i) => {
-      return floorsData[i] || { file: null, dimensions: { length: '', width: '', height: '' } };
+    // Create an updated floors data array based on the new number of floors
+    setFloorsData((prevFloorsData) => {
+      const updatedFloors = Array.from({ length: value }, (_, i) => {
+        return prevFloorsData[i] || { file: null, dimensions: { length: '', width: '', height: '' } };
+      });
+      return updatedFloors;
     });
-    setFloorsData(updatedFloors);
   };
 
   const handleFileChange = (index, file) => {
